@@ -10,6 +10,7 @@ class App extends React.Component {
     };
   }
 
+  //Hi
   componentDidMount() {
     console.log("componentDidMount success")
     axios.get('/api/data')
