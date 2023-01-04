@@ -6,33 +6,45 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      bestShows: []
+      bestShows: [],
+      val: ""
     };
   }
 
   //Hi
   componentDidMount() {
-    console.log("componentDidMount success")
-    axios.get('/api/data')
-      .then(res => {
-        console.log("data recieved: ", res.data);
-        this.setState({ bestShows: res.data[0] });
-      })
-      .catch(alert);
+    // axios.get('/welcome')
+    // .then(res => {
+    //   // console.log("data recieved: ", res);
+    //   this.setState({ val: res.data });
+    // })
+    // console.log("componentDidMount success")
+    axios.get('/test')
+    .then(res => {
+      console.log("data recieved: ", res.data);
+      this.setState({ bestShows: res.data[0].name });
+    })
+    .catch(alert);
+    // axios.get('/api/data')
+    //   .then(res => {
+    //     console.log("data recieved: ", res.data);
+    //     this.setState({ bestShows: res.data[0] });
+    //   })
+    //   .catch(alert);
   }
 
 
   render() {
-    console.log("render bestShows: ", this.state.bestShows)
+    // console.log("render bestShows: ", this.state.bestShows)
     return (
       <div>
-        azure-mern-demo
+        azure-mern-demo {this.state.bestShows}
         <ul>
-          {
+          {/* {
             Object.keys(this.state.bestShows).map((cur, idx) => (
               <li>{cur} - {this.state.bestShows[cur]} </li>
             ))
-          }
+          } */}
         </ul>
       </div>
     );
