@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'tytest'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C3CA0D7C5613450796A32D926901B844 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A39505C8A8614A07B24BD2F4066D2CE2 }}
           package: .
