@@ -30,9 +30,9 @@ app.use(express.static(path.join("./client/build")))
 
 // app.use('/api/data', require('./routes/new-index.js'))
 
-// app.get("*", (req, res) => { //our GET route needs to point to the index.html in our build
-//     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-//   });
+app.get("*", (req, res) => { //our GET route needs to point to the index.html in our build
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
 
 // catch 404 and forward to error handler
 // app.use(function (req, res, next) {
